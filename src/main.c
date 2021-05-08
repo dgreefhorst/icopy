@@ -189,10 +189,10 @@ int _copy_n_to_d(void)
 
   if (OS.dcb.dstats!=1)
     {
-      nstatus(destUnit);
+      nstatus(sourceUnit);
       yvar=OS.dvstat[3];
       print_error();
-      nclose(destUnit);
+      nclose(sourceUnit);
     }
 
   open(D_DEVICE_DATA,8,destDeviceSpec,strlen(destDeviceSpec));
